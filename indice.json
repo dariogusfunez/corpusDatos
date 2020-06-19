@@ -1,0 +1,29 @@
+{
+  "settings": {
+    "number_of_shards": 2,
+    "number_of_replicas": 1
+  },
+   "mappings": {
+    "dynamic": "true",
+    "_source": {
+      "enabled": "true"
+    },
+    "properties": {
+      
+      "consulta": {
+        "type": "text"
+      },
+      "consulta_emb": {
+        "type": "dense_vector",
+        "dims": 512
+      },
+      "questionId": {
+        "type": "keyword"
+      },
+      
+      "respuesta": {
+        "type": "text"
+      }
+    }
+  }
+}
